@@ -39,8 +39,12 @@
       margin-top: 14px;
     }
     .post{
-      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      box-shadow: 0 0 5px rgba(0,0,0,0.14);
       padding:15px;
+      margin:10px;
+    }
+    .post h3{
+      text-transform: capitalize;
     }
   </style>
 </head>
