@@ -33,6 +33,8 @@
     @auth
     <p>Congrats you are logged in!</p>
     <form action="/logout" method="POST">
+      @csrf
+      <button>Logout</button>
     </form>
     @else
     <fieldset style="width:30%; margin:auto;">
