@@ -33,6 +33,7 @@
     
     <fieldset style="width:20%;">
       <legend>All Posts</legend>
+      <div class="flex">
       @foreach ($posts as $post)
           <div class="post">
             <h3>{{$post['title']}}</h3>
@@ -41,10 +42,11 @@
             <form action="/delete-post/{{$post->id}}" method="POST">
               @csrf
               @method('DELETE')
-              <button>Delete</button>
+              <input type="submit" value="Delete">
             </form>
           </div>
       @endforeach
+    </div>
     </fieldset>
 
     @else
