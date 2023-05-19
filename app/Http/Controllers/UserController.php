@@ -8,6 +8,11 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
+  public function login(Request $request)
+  {
+    
+  }
+   
    public function logout()
    {
     auth()->logout();
@@ -28,8 +33,4 @@ class UserController extends Controller
       return redirect('/');
     }
 
-    public function login()
-    {
-      
-    }
 }
