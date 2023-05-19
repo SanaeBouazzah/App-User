@@ -7,8 +7,10 @@ use App\Http\Controllers\UserController;
 
 
 Route::get('/', function () {
-    $posts = Post::where('user_id', auth()->id())->get();
-    // $posts = Post::where('user_id', auth()->id())->get();
+    $posts = [];
+    if(auth()->check()){
+      $posts = auth()->user()->showPosts()->latest()->get();
+    }
     return view('home', ['posts' => $posts]);
 });
 Route::post('/register', [UserController::class, 'register']);
