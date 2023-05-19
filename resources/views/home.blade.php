@@ -5,6 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    .rev{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
     label{
       text-align: left;
       font-weight: bold;
@@ -37,6 +43,7 @@
       <button>Logout</button>
     </form>
     @else
+    <div class="rev">
     <fieldset style="width:30%; margin:auto;">
       <legend>Register</legend>
       <form action="/register" method="POST">
@@ -58,6 +65,24 @@
         </div>
       </form>
     </fieldset>
+    <fieldset style="width:30%; margin:auto;">
+      <legend>Login</legend>
+      <form action="/login" method="POST">
+        @csrf
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" placeholder="Name ..." id="name" name="name">
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" placeholder="Password ..." id="password" name="password">
+        </div>
+        <div>
+          <input type="submit" value="Login">
+        </div>
+      </form>
+    </fieldset>
+  </div>
     @endauth
 
 
