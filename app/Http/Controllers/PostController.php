@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function createPost()
+    public function createPost(Request $request)
     {
-
+      $incomingFields = $request->validate();
     }
 }
