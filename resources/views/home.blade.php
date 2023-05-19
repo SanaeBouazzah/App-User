@@ -31,6 +31,9 @@
 <body>
   <fieldset style="width:30%; margin:auto;">
     <legend>Register</legend>
+    @auth
+    @else
+    @endauth
     <form action="/register" method="POST">
       @csrf
       <div>
