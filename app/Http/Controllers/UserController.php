@@ -8,6 +8,9 @@ class UserController extends Controller
 {
     public function register(Request $request)
     {
+      $incomingFields = $request->validate([
+        
+      ]);
       return 'thank you for your message';
     }
 }
