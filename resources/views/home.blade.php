@@ -42,6 +42,11 @@
       @csrf
       <button>Logout</button>
     </form>
+    <fieldset style="width:30%; margin:auto;">
+      <legend>Create a New Post</legend>
+      <form action="/create-post" method="POST">
+      </form>
+    </fieldset>
     @else
     <div class="rev">
     <fieldset style="width:30%; margin:auto;">
