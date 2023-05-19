@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-
+    public function UpdatePost(Post $post, Request $request)
+    {
+      # code...
+    }
     public function EditPost(Post $post)
     {
       return view('edit-post', ['post' => $post]);
