@@ -31,6 +31,7 @@
 <body>
 
     @auth
+    <p>Congrats you are logged in!</p>
     @else
     <fieldset style="width:30%; margin:auto;">
       <legend>Register</legend>
