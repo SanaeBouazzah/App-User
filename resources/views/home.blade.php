@@ -43,6 +43,7 @@
 <body>
 
     @auth
+    
     <p>Congrats you are logged in!</p>
     <form action="/logout" method="POST">
       @csrf
@@ -63,7 +64,10 @@
         </div>
       </form>
     </fieldset>
+
+
     @else
+
     <div class="rev">
     <fieldset style="width:30%; margin:auto;">
       <legend>Register</legend>
@@ -104,6 +108,7 @@
       </form>
     </fieldset>
   </div>
+
     @endauth
 
 
