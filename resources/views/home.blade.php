@@ -38,12 +38,16 @@
       width:200px;
       margin-top: 14px;
     }
+    .post{
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      padding:15px;
+    }
   </style>
 </head>
 <body>
 
     @auth
-    
+
     <p>Congrats you are logged in!</p>
     <form action="/logout" method="POST">
       @csrf
@@ -64,7 +68,16 @@
         </div>
       </form>
     </fieldset>
-
+    
+    <fieldset style="width:20%;">
+      <legend>All Posts</legend>
+      @foreach ($posts as $post)
+          <div class="post">
+            <h3>{{$post['title']}}</h3>
+            {{$post['body']}}
+          </div>
+      @endforeach
+    </fieldset>
 
     @else
 
