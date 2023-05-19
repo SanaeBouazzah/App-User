@@ -11,7 +11,7 @@ class UserController extends Controller
       $incomingFields = $request->validate([
         'name'=>'required',
         'email'=>'required',
-        'password'=>'required',
+        'password'=>'required'
       ]);
       return 'thank you for your message';
     }

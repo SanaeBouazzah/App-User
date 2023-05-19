@@ -35,11 +35,11 @@
       @csrf
       <div>
         <label for="name">Name:</label>
-        <input type="text" placeholder="Name ..." id="name">
+        <input type="text" placeholder="Name ..." id="name" name="name">
       </div>
       <div>
         <label for="email">Email:</label>
-        <input type="email" placeholder="Email ..." id="email">
+        <input type="email" placeholder="Email ..." id="email" name="email">
       </div>
       <div>
         <label for="password">Password:</label>
