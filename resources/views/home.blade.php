@@ -48,7 +48,7 @@
       @csrf
       <button>Logout</button>
     </form>
-    <fieldset style="width:30%;">
+    <fieldset style="width:20%;">
       <legend>Create a New Post</legend>
       <form action="/create-post" method="POST">
         @csrf
