@@ -4,58 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>App User</title>
-  <style>
-    .rev{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    label{
-      text-align: left;
-      font-weight: bold;
-      margin:5px 0;
-      display: block;
-      font-family: Arial, Helvetica, sans-serif
-    }
-    input{
-      padding: 5px 10px;
-    }
-    input[type="submit"]{
-      margin-top:20px;
-      border:none;
-      outline: none;
-      padding:10px 20px;
-      background: #000;
-      color:#fff;
-      font-family: Arial, Helvetica, sans-serif;
-      display: block;
-      cursor: pointer;
-    }
-    textarea{
-      resize: none;
-      height: 100px;
-      width:200px;
-      margin-top: 14px;
-    }
-    .post{
-      box-shadow: 0 0 5px rgba(0,0,0,0.14);
-      padding:15px;
-      margin:10px;
-    }
-    .post h3{
-      text-transform: capitalize;
-    }
-    .link a{
-      background: #000;
-      color:#fff;
-      padding:10px 20px;
-      border-radius: 5px;
-      display: inline-block;
-      text-decoration: none;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
 
@@ -89,6 +38,11 @@
             <h3>{{$post['title']}}</h3>
             {{$post['body']}}
             <p class="link"><a href="/edit-post/{{$post->id}}">Edit</a></p>
+            <form action="/delete-post/{{$post->id}}" method="POST">
+              @csrf
+              @method('DELETE')
+              <button>Delete</button>
+            </form>
           </div>
       @endforeach
     </fieldset>
