@@ -29,29 +29,32 @@
   </style>
 </head>
 <body>
-  <fieldset style="width:30%; margin:auto;">
-    <legend>Register</legend>
+
     @auth
     @else
+    <fieldset style="width:30%; margin:auto;">
+      <legend>Register</legend>
+      <form action="/register" method="POST">
+        @csrf
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" placeholder="Name ..." id="name" name="name">
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" placeholder="Email ..." id="email" name="email">
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" placeholder="Password ..." id="password" name="password">
+        </div>
+        <div>
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </fieldset>
     @endauth
-    <form action="/register" method="POST">
-      @csrf
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" placeholder="Name ..." id="name" name="name">
-      </div>
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" placeholder="Email ..." id="email" name="email">
-      </div>
-      <div>
-        <label for="password">Password:</label>
-        <input type="password" placeholder="Password ..." id="password" name="password">
-      </div>
-      <div>
-        <input type="submit" value="Register">
-      </div>
-    </form>
-  </fieldset>
+
+
 </body>
 </html>
