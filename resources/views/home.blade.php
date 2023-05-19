@@ -24,13 +24,15 @@
       color:#fff;
       font-family: Arial, Helvetica, sans-serif;
       display: block;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <fieldset style="width:30%; margin:auto;">
     <legend>Register</legend>
-    <form action="">
+    <form action="/register" method="POST">
+      @csrf
       <div>
         <label for="name">Name:</label>
         <input type="text" placeholder="Name ..." id="name">
