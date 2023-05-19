@@ -10,8 +10,8 @@ class UserController extends Controller
     {
       $incomingFields = $request->validate([
         'name'=>['required', 'min:3', 'max:10'],
-        'email'=>'required',
-        'password'=>'required'
+        'email'=>['required', 'email'],
+        'password'=>['required', 'min:5', 'max:40']
       ]);
       return 'thank you for your message';
     }
