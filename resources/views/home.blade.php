@@ -43,7 +43,7 @@
       </div>
       <div>
         <label for="password">Password:</label>
-        <input type="password" placeholder="Password ..." id="password">
+        <input type="password" placeholder="Password ..." id="password" name="password">
       </div>
       <div>
         <input type="submit" value="Register">
