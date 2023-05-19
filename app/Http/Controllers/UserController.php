@@ -8,6 +8,12 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
+   public function logout()
+   {
+    
+   }
+    
+
     public function register(Request $request)
     {
       $incomingFields = $request->validate([
