@@ -10,7 +10,12 @@ class UserController extends Controller
 {
   public function login(Request $request)
   {
-    
+    $incomingFields = $request->validate([
+      'loginname'=>'required',
+      'loginpassword'=>'required'
+    ]);
+    if
+    return redirect('/');
   }
    
    public function logout()
