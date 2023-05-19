@@ -71,11 +71,11 @@
         @csrf
         <div>
           <label for="name">Name:</label>
-          <input type="text" placeholder="Name ..." id="name" name="name">
+          <input type="text" placeholder="Name ..." id="loginname" name="loginname">
         </div>
         <div>
           <label for="password">Password:</label>
-          <input type="password" placeholder="Password ..." id="password" name="password">
+          <input type="password" placeholder="Password ..." id="loginpassword" name="loginpassword">
         </div>
         <div>
           <input type="submit" value="Login">
