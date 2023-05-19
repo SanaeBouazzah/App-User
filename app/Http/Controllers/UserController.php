@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function register()
+    public function register(Request $request)
     {
       return 'thank you for your message';
     }
