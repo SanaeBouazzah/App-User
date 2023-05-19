@@ -13,6 +13,7 @@ class UserController extends Controller
         'email'=>['required', 'email'],
         'password'=>['required', 'min:5']
       ]);
+      User::create($incomingFields);
       return 'thank you for your message';
     }
 }
