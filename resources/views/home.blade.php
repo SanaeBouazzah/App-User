@@ -45,6 +45,9 @@
     <fieldset style="width:30%; margin:auto;">
       <legend>Create a New Post</legend>
       <form action="/create-post" method="POST">
+        @csrf
+        <input type="text" name="title" placeholder="title">
+        <textarea name="body" placeholder="body"></textarea>
       </form>
     </fieldset>
     @else
