@@ -46,6 +46,15 @@
     .post h3{
       text-transform: capitalize;
     }
+    .link a{
+      background: #000;
+      color:#fff;
+      padding:10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -79,6 +88,7 @@
           <div class="post">
             <h3>{{$post['title']}}</h3>
             {{$post['body']}}
+            <p class="link"><a href="/edit-post/{{$post->id}}">Edit</a></p>
           </div>
       @endforeach
     </fieldset>
