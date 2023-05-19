@@ -32,6 +32,12 @@
       display: block;
       cursor: pointer;
     }
+    textarea{
+      resize: none;
+      height: 100px;
+      width:200px;
+      margin-top: 14px;
+    }
   </style>
 </head>
 <body>
@@ -42,12 +48,19 @@
       @csrf
       <button>Logout</button>
     </form>
-    <fieldset style="width:30%; margin:auto;">
+    <fieldset style="width:30%;">
       <legend>Create a New Post</legend>
       <form action="/create-post" method="POST">
         @csrf
-        <input type="text" name="title" placeholder="title">
-        <textarea name="body" placeholder="body"></textarea>
+        <div>
+          <input type="text" name="title" placeholder="Title Post...">
+        </div>
+        <div>
+          <textarea name="body" placeholder="body..."></textarea>
+        </div>
+        <div>
+          <input type="submit" value="Save Post">
+        </div>
       </form>
     </fieldset>
     @else
