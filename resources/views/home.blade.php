@@ -9,7 +9,7 @@
 <body>
 
     @auth
-    <div class="flex">
+    <div class="flex2">
       <div class="text">
     <p>Congrats you are logged in!</p>
     <form action="/logout" method="POST">
