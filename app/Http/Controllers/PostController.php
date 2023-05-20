@@ -10,7 +10,7 @@ class PostController extends Controller
 
     public function DeletePost(Post $post)
     {
-      if(auth()->user()->id !== $post['user_id']){
+      if(auth()->user()->id === $post['user_id']){
         return redirect('/');
       }
     }
