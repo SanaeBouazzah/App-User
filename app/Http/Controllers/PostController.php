@@ -19,7 +19,8 @@ class PostController extends Controller
       $incomingFields['title'] = strip_tags($incomingFields['title']);
       $incomingFields['body'] = strip_tags($incomingFields['body']);
 
-      $post->update();
+      $post->update($incomingFields);
+      return redirect('/');
     }
     public function EditPost(Post $post)
     {
