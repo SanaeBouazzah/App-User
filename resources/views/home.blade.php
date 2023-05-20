@@ -15,7 +15,7 @@
       @csrf
       <button>Logout</button>
     </form>
-    <fieldset style="width:100%; text-align:center;">
+    <fieldset style="width:20%;">
       <legend>Create a New Post</legend>
       <form action="/create-post" method="POST">
         @csrf
