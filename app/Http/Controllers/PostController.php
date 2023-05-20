@@ -9,10 +9,15 @@ class PostController extends Controller
 {
     public function UpdatePost(Post $post, Request $request)
     {
-      # code...
+      if(auth()->user()->id !== $post['user_id']){
+        return redirect('/');
+      }
     }
     public function EditPost(Post $post)
     {
+      if(auth()->user()->id !== $post['user_id']){
+        return redirect('/');
+      }
       return view('edit-post', ['post' => $post]);
     } 
     public function createPost(Request $request)
