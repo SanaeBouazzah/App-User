@@ -10,28 +10,28 @@
 
     @auth
     <div class="flex2">
+      <fieldset style="width:20%;">
+        <legend>Create a New Post</legend>
+        <form action="/create-post" method="POST">
+          @csrf
+          <div>
+            <input type="text" name="title" placeholder="Title Post...">
+          </div>
+          <div>
+            <textarea name="body" placeholder="body..."></textarea>
+          </div>
+          <div>
+            <input type="submit" value="Save Post">
+          </div>
+        </form>
+      </fieldset>
        <div class="text">
         <p>Congrats you are logged in!</p>
         <form action="/logout" method="POST">
            @csrf
            <button>Logout</button>
         </form>
-  </div>
-    <fieldset style="width:20%;">
-      <legend>Create a New Post</legend>
-      <form action="/create-post" method="POST">
-        @csrf
-        <div>
-          <input type="text" name="title" placeholder="Title Post...">
-        </div>
-        <div>
-          <textarea name="body" placeholder="body..."></textarea>
-        </div>
-        <div>
-          <input type="submit" value="Save Post">
-        </div>
-      </form>
-    </fieldset>
+       </div>
   </div>
     
     <fieldset style="width:20%;">
@@ -39,7 +39,7 @@
       <div class="flex">
       @foreach ($posts as $post)
           <div class="post">
-            <h3>{{$post['title']}} by {{$post->user->name}}</h3>
+            <h3>{{$post['title']}} by <span>{{$post->user->name}}</span></h3>
             {{$post['body']}}
             <p class="link"><a href="/edit-post/{{$post->id}}">Edit</a></p>
             <form action="/delete-post/{{$post->id}}" method="POST">
