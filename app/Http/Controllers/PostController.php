@@ -18,6 +18,8 @@ class PostController extends Controller
       ]);
       $incomingFields['title'] = strip_tags($incomingFields['title']);
       $incomingFields['body'] = strip_tags($incomingFields['body']);
+
+      $post->update();
     }
     public function EditPost(Post $post)
     {
