@@ -12,6 +12,10 @@ class PostController extends Controller
       if(auth()->user()->id !== $post['user_id']){
         return redirect('/');
       }
+      $incomingFields = $request->validate([
+        'title' => 'required',
+        'body' => 'required'
+      ]);
     }
     public function EditPost(Post $post)
     {
