@@ -9,12 +9,14 @@
 <body>
 
     @auth
-
+    <div class="flex">
+      <div class="text">
     <p>Congrats you are logged in!</p>
     <form action="/logout" method="POST">
       @csrf
       <button>Logout</button>
     </form>
+  </div>
     <fieldset style="width:20%;">
       <legend>Create a New Post</legend>
       <form action="/create-post" method="POST">
@@ -30,6 +32,7 @@
         </div>
       </form>
     </fieldset>
+  </div>
     
     <fieldset style="width:20%;">
       <legend>All Posts</legend>
