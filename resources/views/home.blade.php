@@ -55,7 +55,7 @@
     @else
 
     <div class="rev">
-    <fieldset style="width:30%; margin:auto;">
+    <fieldset style="width:30%; margin:auto;" class="Register">
       <legend>Register</legend>
       <form action="/register" method="POST">
         @csrf
@@ -74,9 +74,14 @@
         <div>
           <input type="submit" value="Register">
         </div>
+        <div class="instrucions">
+          <span>* name required min 3 characters</span>
+          <span>* email required format: example@mail.com</span>
+          <span>* password required min 5 characters</span>
+        </div>
       </form>
     </fieldset>
-    <fieldset style="width:30%; margin:auto;">
+    <fieldset style="width:30%; margin:auto;" class="Login">
       <legend>Login</legend>
       <form action="/login" method="POST">
         @csrf
@@ -90,6 +95,10 @@
         </div>
         <div>
           <input type="submit" value="Login">
+        </div>
+        <div class="instrucions">
+          <span>* name required min 3 characters</span>
+          <span>* password required min 5 characters</span>
         </div>
       </form>
     </fieldset>

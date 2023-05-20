@@ -79,3 +79,8 @@ h3 span{
   color:#009688;
   text-decoration: underline;
 }
+.instrucions span{
+  display: block;
+  color:red;
+  margin:5px 0;
+}
