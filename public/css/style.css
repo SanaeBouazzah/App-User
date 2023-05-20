@@ -49,7 +49,7 @@ textarea{
 .link a{
   background: #000;
   color:#fff;
-  padding:10px 20px;
+  padding:5px 20px;
   border-radius: 5px;
   text-align: center;
   display: block;
@@ -59,7 +59,7 @@ textarea{
 .post form input{
   background: #000;
   color:#fff;
-  padding:11px 20px;
+  padding:7px 20px;
   border-radius: 5px;
   display: block;
   font-family: Arial, Helvetica, sans-serif;
