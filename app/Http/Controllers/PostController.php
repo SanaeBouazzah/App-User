@@ -11,8 +11,9 @@ class PostController extends Controller
     public function DeletePost(Post $post)
     {
       if(auth()->user()->id === $post['user_id']){
-        return redirect('/');
+        
       }
+      return redirect('/');
     }
     public function UpdatePost(Post $post, Request $request)
     {
